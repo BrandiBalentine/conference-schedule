@@ -2,8 +2,9 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'atlassian',
+    modulePrefix: 'conference-schedule',
     environment: environment,
+    podModulePrefix: 'conference-schedule/pods',
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {

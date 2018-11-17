@@ -1,0 +1,17 @@
+// Layout
+%layout {
+  margin: 0 auto;
+  width: 1008px;
+}
+
+// Clear floats
+%clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after{
+    clear: both;
+  }
+}

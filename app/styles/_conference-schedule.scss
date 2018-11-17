@@ -1,0 +1,156 @@
+header {
+  background-color: $primary-color;
+  height: 40px;
+
+  .container-logo {
+    @extend %layout;
+  }
+
+  .logo {
+    height: 27px;
+    margin: 5px 0;
+  }
+}
+
+main {
+  @extend %layout;
+}
+
+.section-title {
+  margin: 50px auto;
+  text-align: center;
+  width: 350px;
+
+  p {
+    color: $font-color;
+    font-size: 1.8em;
+    margin: 10px;
+  }
+}
+
+.tab-list {
+  @extend %clearfix;
+  border-bottom: 1px solid $border-color;
+  margin: 0 auto;
+  max-width: 1008px;
+  padding: 10px 0;
+
+  li {
+    color: $font-color-dark;
+    float: left;
+    font-size: 1.4em;
+    list-style: none;
+    text-align: center;
+  }
+
+  a {
+    background-color: $background-dark;
+    border-bottom: 1px solid $border-color;
+    border-left: 1px solid $border-color;
+    border-right: none;
+    border-top: 1px solid $border-color;
+    padding: 10px 20px;
+  }
+
+  .tab {
+
+    &:first-child {
+
+      a {
+        border-top-left-radius: 5px;
+      }
+    }
+
+    &:last-child {
+
+      a {
+        border-right: 1px solid $border-color;
+        border-top-right-radius: 5px;
+      }
+    }
+  }
+
+  .active {
+
+    a {
+      background-color: $white;
+      border-bottom: 1px solid $white;
+      color: $font-color;
+      min-width: 70px;
+    }
+  }
+}
+
+.section-session {
+  margin: 20px auto;
+  max-width: 1008px;
+}
+
+.session-list {
+  @extend %clearfix;
+  float: left;
+  width: 30%;
+
+  ul {
+    padding: 0;
+  }
+
+  .session-list-item {
+
+    &:first-child {
+
+      li {
+        border-top: 1px solid $border-color;
+      }
+    }
+  }
+
+  li {
+    background-color: $background-light;
+    border-bottom: 1px solid $border-color;
+    list-style: none;
+    min-height: 40px;
+    padding: 5px 10px;
+  }
+
+  .active {
+    background-color: $background-dark;
+  }
+
+  a {
+    color: $primary-color;
+    font-size: 1.4em;
+    font-weight: bold;
+  }
+
+  p {
+    color: $font-color;
+    font-size: 1.2em;
+    margin: 5px 0;
+  }
+}
+
+.session-details {
+  float: left;
+  margin-left: 50px;
+  width: 65%;
+
+  p {
+    line-height: 20px;
+    margin: 15px 0;
+  }
+}
+
+.container-session-title {
+
+  a {
+    color: $secondary-color;
+    font-size: 1.4em;
+  }
+}
+
+.session-subtitle {
+  color: $primary-color;
+  font-size: 1.4em;
+  margin: 15px 0;
+}

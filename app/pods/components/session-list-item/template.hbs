@@ -1,0 +1,6 @@
+<li {{action "setCurrentSessionId" session.id}} class="{{if isCurrentSession "active"}}">
+  <a>{{session.title}}</a>
+  {{#each session.speakers as |speaker|}}
+    <p>{{speaker.FirstName}} {{speaker.LastName}}, {{speaker.Company}}</p>
+  {{/each}}
+</li>

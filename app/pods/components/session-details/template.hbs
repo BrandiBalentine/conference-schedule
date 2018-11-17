@@ -1,0 +1,20 @@
+<div class="session-details">
+  <div class="container-session-title">
+    <h3>{{session.title}}</h3>
+    {{#each session.speakers as |speaker|}}
+      <p class="session-subtitle">{{speaker.FirstName}} {{speaker.LastName}}, {{speaker.Company}}</p>
+    {{/each}}
+    <p>{{session.description}}</p>
+    <a>See the Q&A from this talk and others here.</a>
+  </div>
+  <div>
+    {{#if session.speakers}}
+      <h4>About the speaker</h4>
+    {{/if}}
+    {{#each session.speakers as |speaker|}}
+      <p><strong>{{speaker.FirstName}} {{speaker.LastName}}</strong>, {{#if speaker.Title}}{{speaker.Title}}, {{/if}}{{speaker.Company}}</p>
+      <p>{{speaker.Biography}}</p>
+    {{/each}}
+  </div>
+</div>
+{{yield}}

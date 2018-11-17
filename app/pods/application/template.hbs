@@ -1,0 +1,32 @@
+<header>
+  <div class="container-logo">
+    <a href="https://www.atlassian.com" title="Atlassian">
+      <img class="logo" src="assets/images/atlassian-logo.png" alt="Atlassian Logo"/>
+    </a>
+  </div>
+</header>
+<main>
+  <section class="section-title">
+    <h1><img src="assets/images/summit-logo.png" alt="Atlassian Summit Title"/></h1>
+    <p>Video Archive</p>
+  </section>
+  <section>
+    <ul class="tab-list">
+      {{#each-in trackSessionMap as |track|}}
+        {{track-tab track=track action=(action "changeTrack") currentTrack=currentTrack}}
+      {{/each-in}}
+    </ul>
+  </section>
+  <section class="section-session">
+    <div class="session-list">
+      <h2>{{currentTrack}}</h2>
+      <ul>
+        {{#each sessions as |session|}}
+          {{session-list-item action=(action "setCurrentSessionId") currentSessionId=currentSessionId session=session}}
+        {{/each}}
+      </ul>
+    </div>
+    {{session-details session=currentSession}}
+  </section>
+  {{outlet}}
+</main>
