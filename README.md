@@ -1,6 +1,8 @@
-# Conference Schedule
+# Conference Demo
 
-View session information for a conference.
+This is a demo of the Atlassian Summit Video Archive.
+
+![Image](https://i.imgur.com/p4DYuRq.png)
 
 ## Prerequisites
 
@@ -15,7 +17,7 @@ You will need the following things properly installed on your computer.
 ## Installation
 
 * `git clone` this repository
-* change into the conference-schedule directory
+* change into the atlassian directory
 * `npm install`
 * `bower install`
 
